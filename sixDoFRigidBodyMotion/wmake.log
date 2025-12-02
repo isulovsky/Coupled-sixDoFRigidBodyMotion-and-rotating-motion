@@ -1,0 +1,59 @@
+wmake libso 
+wmake: 'Make' directory does not exist in /home/isulovsky/myLibraries/mysixDoFRigidBodyMotion/sixDoFRigidBodyMotion
+    Searching up directories tree for Make directory
+g++ -std=c++11 -m64 -pthread -DOPENFOAM=2012 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas  -O3  -DNoRepository -ftemplate-depth-100 -I/opt/OpenFOAM/OpenFOAM-v2012/src/finiteVolume/lnInclude -I/opt/OpenFOAM/OpenFOAM-v2012/src/fileFormats/lnInclude -I/opt/OpenFOAM/OpenFOAM-v2012/src/meshTools/lnInclude -I/opt/OpenFOAM/OpenFOAM-v2012/src/functionObjects/forces/lnInclude -I/opt/OpenFOAM/OpenFOAM-v2012/src/dynamicMesh/lnInclude -iquote. -IlnInclude -I/opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude -I/opt/OpenFOAM/OpenFOAM-v2012/src/OSspecific/POSIX/lnInclude   -fPIC -c sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C -o Make/linux64Gcc63DPInt32Opt/sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.o
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:291:6: error: ‘sixDoFRigidBodyMotion’ has not been declared
+ bool sixDoFRigidBodyMotion::isPropellerActive() const
+      ^~~~~~~~~~~~~~~~~~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:291:49: error: non-member function ‘bool isPropellerActive()’ cannot have cv-qualifier
+ bool sixDoFRigidBodyMotion::isPropellerActive() const
+                                                 ^~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C: In function ‘bool isPropellerActive()’:
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:293:12: error: ‘propellerMotion_’ was not declared in this scope
+     return propellerMotion_.propellerMotionActive();
+            ^~~~~~~~~~~~~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C: At global scope:
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:295:1: error: ‘word’ does not name a type
+ word sixDoFRigidBodyMotion::getPropellerZoneName() const
+ ^~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C: In member function ‘void Foam::sixDoFRigidBodyMotion::addPropeller(const Foam::dictionary&)’:
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:305:27: warning: unused variable ‘propellerDict’ [-Wunused-variable]
+         const dictionary& propellerDict = dict.subDict("propellerMotion");
+                           ^~~~~~~~~~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C: At global scope:
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:314:6: error: ‘sixDoFRigidBodyMotion’ has not been declared
+ void sixDoFRigidBodyMotion::applyPropellerRotation(pointField& points, scalar deltaT)
+      ^~~~~~~~~~~~~~~~~~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:314:52: error: variable or field ‘applyPropellerRotation’ declared void
+ void sixDoFRigidBodyMotion::applyPropellerRotation(pointField& points, scalar deltaT)
+                                                    ^~~~~~~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:314:52: error: ‘pointField’ was not declared in this scope
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:314:52: note: suggested alternative:
+In file included from /opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/pointField.H:39:0,
+                 from /opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/edge.H:53,
+                 from /opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/edgeList.H:55,
+                 from /opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/primitiveMesh.H:57,
+                 from /opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/polyMesh.H:48,
+                 from /opt/OpenFOAM/OpenFOAM-v2012/src/finiteVolume/lnInclude/fvMesh.H:53,
+                 from sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.H:52,
+                 from sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:29:
+/opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/pointFieldFwd.H:44:25: note:   ‘Foam::pointField’
+     typedef vectorField pointField;
+                         ^~~~~~~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:314:64: error: ‘points’ was not declared in this scope
+ void sixDoFRigidBodyMotion::applyPropellerRotation(pointField& points, scalar deltaT)
+                                                                ^~~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:314:72: error: ‘scalar’ was not declared in this scope
+ void sixDoFRigidBodyMotion::applyPropellerRotation(pointField& points, scalar deltaT)
+                                                                        ^~~~~~
+sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:314:72: note: suggested alternative:
+In file included from /opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/floatScalar.H:41:0,
+                 from /opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/scalar.H:42,
+                 from /opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/vector.H:41,
+                 from sixDoFRigidBodyMotion/sixDoFRigidBodyMotionState.H:45,
+                 from sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.H:51,
+                 from sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.C:29:
+/opt/OpenFOAM/OpenFOAM-v2012/src/OpenFOAM/lnInclude/scalarFwd.H:63:22: note:   ‘Foam::scalar’
+ typedef doubleScalar scalar;
+                      ^~~~~~
+make: *** [/opt/OpenFOAM/OpenFOAM-v2012/wmake/rules/General/transform:35: Make/linux64Gcc63DPInt32Opt/sixDoFRigidBodyMotion/sixDoFRigidBodyMotion.o] Error 1
