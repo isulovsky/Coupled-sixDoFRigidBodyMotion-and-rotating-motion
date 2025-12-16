@@ -5,4 +5,4 @@ https://github.com/user-attachments/assets/2d793ddb-0d6d-4c1a-867e-2ceb5feb6713
 
 If you are using in any way this solver please cite:
 
-Ivan Sulovsky, Andro Bakica and Jasna Prpić-Oršić "CFD assessment of ship propulsion and propeller-hull interactions in waves using low and high fidelity approach", 2025, Ocean Engineering, doi:10.1016/j.oceaneng.2025.123843
+Ivan Sulovsky, Andro Bakica and Jasna Prpić-Oršić "CFD assessment of ship propulsion and propeller-hull interactions in waves using low and high fidelity approach", 2025, Ocean Engineering, doi:https://doi.org/10.1016/j.oceaneng.2025.123843
